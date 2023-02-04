@@ -7,7 +7,7 @@ function App() {
 
   const handleChange = async (event) => {
     setCity(event.target.value);
-    getCity()
+    getCity();
   };
 
   // async function getCity() {
@@ -44,36 +44,48 @@ function App() {
 
   useEffect(() => {
     getCity();
-  },[]);
+  }, []);
   return (
-    <div className="App">
-      <div className="title-container">
-        <h1>Previsão do tempo</h1>
-      </div>
+    <>
+      <div className="App">
+        <div className="title-container">
+          <h1>Previsão do tempo</h1>
+        </div>
 
-      <div className="searchbar-container">
-        <input
-          id="icon"
-          type="text"
-          placeholder="Insira aqui o nome da cidade"
-          onChange={handleChange}
-        ></input>
+        <div className="searchbar-container">
+          <input
+            id="icon"
+            type="text"
+            placeholder="Insira aqui o nome da cidade"
+            onChange={handleChange}
+          ></input>
+        </div>
+        <hr className="separation-line" />
       </div>
-      <hr className="separation-line" />
-      <ul>
-        <h1>Cidade: {city}</h1>
-        <li>Velocidade do vento: {weather.wind_speed}</li>
-        <li>Grau do vento: {weather.wind_degrees}</li>
-        <li>Temperatura: {weather.temp}</li>
-        <li>Humidade: {weather.humidity}</li>
-        <li>Por do sol: {weather.sunset}</li>
-        <li>Temperatura mínima: {weather.min_temp}</li>
-        <li>Núvens: {weather.cloud_pct}</li>
-        <li>Nascer do sol: {weather.sunrise}</li>
-        <li>Temperatura máxima: {weather.max_temp}</li>
-      </ul>
-    </div>
+      <div className="capitais-container">
+        <h2>Capitais</h2>
+      </div>
+      <div className="minmax-container">
+        <h6>Min</h6>
+        <h6>Max</h6>
+      </div>
+    </>
   );
+}
+
+{
+  /* <ul>
+  <h1>Cidade: {city}</h1>
+  <p>Velocidade do vento: {weather.wind_speed}</p>
+  <p>Grau do vento: {weather.wind_degrees}</p>
+  <p>Temperatura: {weather.temp}</p>
+  <p>Humidade: {weather.humidity}</p>
+  <p>Por do sol: {weather.sunset}</p>
+  <p>Temperatura mínima: {weather.min_temp}</p>
+  <p>Núvens: {weather.cloud_pct}</p>
+  <p>Nascer do sol: {weather.sunrise}</p>
+  <p>Temperatura máxima: {weather.max_temp}</p>
+</ul>; */
 }
 
 export default App;

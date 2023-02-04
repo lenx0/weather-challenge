@@ -42,6 +42,26 @@ body {
   width: 450px;
 }
 
+.capitais-container {
+  font-size: 25px;
+  height: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  margin-left: 200px;
+}
+
+.minmax-container {
+  display: flex;
+  margin-left: 200px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(54, 54, 54);
+  padding: 2px;
+}
+
+.minmax-container h6 {
+  margin-left: 10px;
+}
+
 /* #icon {
   background-image: url(icons/search.svg);
   background-position: 2px 2px;
