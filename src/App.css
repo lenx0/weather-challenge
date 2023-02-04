@@ -1,0 +1,49 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ff9000;
+}
+
+::placeholder {
+  color: #878787;
+}
+
+.title-container h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  color: white;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.searchbar-container {
+  display: flex;
+  justify-content: center;
+}
+
+.searchbar-container input {
+  width: 350px;
+  height: 40px;
+  font-size: 20px;
+  margin-top: 20px;
+  padding-left: 10px;
+  display: flex;
+}
+
+.separation-line {
+  margin-top: 60px;
+  width: 450px;
+}
+
+/* #icon {
+  background-image: url(icons/search.svg);
+  background-position: 2px 2px;
+  background-repeat: no-repeat;
+} */
