@@ -5,8 +5,9 @@ function App() {
   const [city, setCity] = useState("");
   const [weather, setWeather] = useState([]);
 
-  const handleChange = (event) => {
+  const handleChange = async (event) => {
     setCity(event.target.value);
+    getCity()
   };
 
   // async function getCity() {
@@ -43,7 +44,7 @@ function App() {
 
   useEffect(() => {
     getCity();
-  });
+  },[]);
   return (
     <div className="App">
       <div className="title-container">
@@ -60,6 +61,7 @@ function App() {
       </div>
       <hr className="separation-line" />
       <ul>
+        <h1>Cidade: {city}</h1>
         <li>Velocidade do vento: {weather.wind_speed}</li>
         <li>Grau do vento: {weather.wind_degrees}</li>
         <li>Temperatura: {weather.temp}</li>
